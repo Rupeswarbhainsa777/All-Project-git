@@ -1,76 +1,140 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Rupeswar Bhainsa — Projects & GitHub</title>
-<style>
-:root{
---bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --glass: rgba(255,255,255,0.04);
---radius:14px; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-}
-*{box-sizing:border-box}
-html,body{height:100%; margin:0; background:linear-gradient(180deg,#071022 0%, #081026 60%); color:#e6eef6}
-.wrap{max-width:1100px;margin:36px auto;padding:28px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 8px 30px rgba(2,6,23,0.6)}
-header{display:flex;gap:20px;align-items:center;justify-content:space-between}
-.title{display:flex;gap:16px;align-items:center}
-.avatar{width:78px;height:78px;border-radius:14px;background:linear-gradient(135deg,var(--accent), #7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021026;font-size:20px}
-h1{font-size:22px;margin:0}
-p.lead{margin:6px 0 0;color:var(--muted)}
-
-
-.controls{display:flex;gap:12px;align-items:center}
-input[type=search]{padding:10px 14px;border-radius:12px;background:var(--card);border:1px solid rgba(255,255,255,0.04);color:inherit;outline:none;min-width:240px}
-.btn{padding:10px 14px;border-radius:12px;background:var(--accent);color:#021026;font-weight:600;border:none;cursor:pointer}
-
-
-main{margin-top:22px}
-.meta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
-.chip{padding:8px 12px;border-radius:999px;background:var(--glass);color:var(--muted);font-weight:600;border:1px solid rgba(255,255,255,0.02)}
-
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);backdrop-filter: blur(6px)}
-.card h3{margin:0 0 6px;font-size:16px}
-.card p{margin:0 0 10px;color:var(--muted);font-size:14px}
-.links{display:flex;gap:8px;flex-wrap:wrap}
-.link{padding:8px 10px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02);font-size:13px;color:var(--muted);text-decoration:none}
-.small{font-size:12px;color:var(--muted)}
-
-
-footer{margin-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-.actions{display:flex;gap:8px}
-
-
-/* mobile tweaks */
-@media (max-width:520px){.title h1{font-size:18px}.avatar{width:60px;height:60px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="wrap">
-<header>
-<div class="title">
-<div class="avatar">RB</div>
-<div>
-<h1>Rupeswar Bhainsa — Projects & GitHub</h1>
-<p class="lead">A concise showcase of your projects with live links to GitHub and demos.</p>
-</div>
-</div>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    My Projects
+                </div>
+                <nav class="nav">
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Welcome to My Project Portfolio</h1>
+            <p class="hero-subtitle">
+                Explore my collection of projects, from web applications to mobile apps, 
+                each showcasing different technologies and creative solutions.
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number" id="total-projects">0</div>
+                    <div class="stat-label">Total Projects</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="technologies">0</div>
+                    <div class="stat-label">Technologies</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="repositories">0</div>
+                    <div class="stat-label">Repositories</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="controls">
-<input id="search" type="search" placeholder="Search projects (name, tech)" />
-<button class="btn" id="copyProfile">Copy GitHub URL</button>
-</div>
-</header>
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-content">
+                <h3>Filter Projects</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Apps</button>
+                    <button class="filter-btn" data-filter="DataAnalytics">Data Analytics</button>
+                    <button class="filter-btn" data-filter="General">General</button>
+                
+                </div>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Search projects...">
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
 
-<main>
-<div class="meta">
-<div class="chip">Java • React • MySQL</div>
-<div class="chip">Frontend • Backend • REST</div>
-<div class="chip">Portfolio generated: single-file</div>
-</div>
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>About This Portfolio</h2>
+                <p>
+                    This portfolio showcases my journey as a developer, featuring projects that demonstrate 
+                    my skills across various technologies and platforms. Each project represents a learning 
+                    experience and a step forward in my development career.
+                </p>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-code"></i>
+                        <h4>Clean Code</h4>
+                        <p>Well-structured, maintainable code following best practices</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Responsive Design</h4>
+                        <p>Projects optimized for all devices and screen sizes</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-rocket"></i>
+                        <h4>Modern Tech</h4>
+                        <p>Built with the latest technologies and frameworks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Get In Touch</h2>
+                <p>Interested in collaborating or have questions about my projects?</p>
+                <div class="contact-links">
+                    <a href="mailto:rupeswarbhainsa777@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        Email Me
+                    </a>
+                    <a href="https://github.com/Rupeswarbhainsa777" class="contact-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/rupeswar-bhainsa-2b98b7227/" class="contact-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="grid" id="projectsGrid">
+    <script src="main.js"></script>
+</body>
+</html>
