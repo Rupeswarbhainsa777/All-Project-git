@@ -1,93 +1,95 @@
 // Sample project data - Replace with your actual projects
 const projects = [
-    {
-        id: 1,
-        title: "E-Commerce Platform",
-        description: "Developed Spring Boot backend services for authentication, product management, and order processing, designed an optimized MySQL schema with indexing to reduce query response time by 40%, and built/tested REST APIs using JUnit & Postman achieving 85%+ code coverage.",
-        category: "web",
-        technologies: ["Spring Boot", "MySQL", "JUnit", "Postman"],
-        githubUrl: "https://github.com/Rupeswarbhainsa777/Ecommerce-Backend",
-        liveUrl: "https://ecommerce-front-end-phi-neon.vercel.app/",
-        image: null,
-        icon: "🛒"
-    },
-    {
-        id: 2,
-        title: "Application Management System",
-        description: "Built a full-stack job application management web app with CRUD operations by implementing Spring Boot REST APIs for job details and status tracking, designing a user-friendly React UI integrated with backend services, and managing data persistence with MySQL.",
-        category: "web",
-        technologies: ["Spring Boot", "React", "MySQL", "JUnit", "Postman"],
-        githubUrl: "https://github.com/Rupeswarbhainsa777/Application-Management-Web-Application-Backend",
-        liveUrl: "https://application-management-web-applicat.vercel.app/",
-        image: null,
-        icon: "✅"
-    },
-    {
-        id: 3,
-        title: "Weather Mobile App",
-        description: "Cross-platform mobile weather application built with React Native. Features location-based weather forecasts and beautiful UI.",
-        category: "mobile",
-        technologies: ["React Native", "Expo", "OpenWeather API", "AsyncStorage"],
-        githubUrl: "https://github.com/yourusername/weather-app",
-        liveUrl: null,
-        image: null,
-        icon: "🌤️"
-    },
-    {
-        id: 4,
-        title: "Desktop File Organizer",
-        description: "A Python desktop application that automatically organizes files based on type, date, and custom rules. Built with PyQt5.",
-        category: "desktop",
-        technologies: ["Python", "PyQt5", "SQLite", "Threading"],
-        githubUrl: "https://github.com/yourusername/file-organizer",
-        liveUrl: null,
-        image: null,
-        icon: "📁"
-    },
-    {
-        id: 5,
-        title: "API Rate Limiter",
-        description: "A Node.js middleware for rate limiting API requests. Supports Redis for distributed systems and multiple rate limiting strategies.",
-        category: "tools",
-        technologies: ["Node.js", "Redis", "Express", "Jest"],
-        githubUrl: "https://github.com/yourusername/api-rate-limiter",
-        liveUrl: "https://www.npmjs.com/package/your-rate-limiter",
-        image: null,
-        icon: "⚡"
-    },
-    {
-        id: 6,
-        title: "Portfolio Website",
-        description: "A responsive portfolio website built with vanilla HTML, CSS, and JavaScript. Features smooth animations and modern design.",
-        category: "web",
-        technologies: ["HTML5", "CSS3", "JavaScript", "GSAP"],
-        githubUrl: "https://github.com/yourusername/portfolio-website",
-        liveUrl: "https://your-portfolio.com",
-        image: null,
-        icon: "💼"
-    },
-    {
-        id: 7,
-        title: "Machine Learning Model",
-        description: "A machine learning model for image classification using TensorFlow and Python. Trained on custom dataset with 95% accuracy.",
-        category: "tools",
-        technologies: ["Python", "TensorFlow", "OpenCV", "NumPy", "Pandas"],
-        githubUrl: "https://github.com/yourusername/ml-image-classifier",
-        liveUrl: null,
-        image: null,
-        icon: "🤖"
-    },
-    {
-        id: 8,
-        title: "Chat Application",
-        description: "Real-time chat application with Socket.io, Express, and React. Features include private messaging, rooms, and file sharing.",
-        category: "web",
-        technologies: ["React", "Socket.io", "Express", "MongoDB", "Multer"],
-        githubUrl: "https://github.com/yourusername/chat-app",
-        liveUrl: "https://your-chat-app.herokuapp.com",
-        image: null,
-        icon: "💬"
-    }
+  {
+    id: 1,
+    title: "E-Commerce Platform",
+    description:
+      "Developed Spring Boot backend services for authentication, product management, and order processing, designed an optimized MySQL schema with indexing to reduce query response time by 40%, and built/tested REST APIs using JUnit & Postman achieving 85%+ code coverage.",
+    category: "web",
+    technologies: ["Spring Boot", "MySQL", "JUnit", "Postman"],
+    githubUrl: "https://github.com/Rupeswarbhainsa777/Ecommerce-Backend",
+    liveUrl: "https://ecommerce-front-end-phi-neon.vercel.app/",
+    image: null,
+    icon: "🛒" // shopping cart for e-commerce
+  },
+  {
+    id: 2,
+    title: "Application Management System",
+    description:
+      "Built a full-stack job application management web app with CRUD operations by implementing Spring Boot REST APIs for job details and status tracking, designing a user-friendly React UI integrated with backend services, and managing data persistence with MySQL.",
+    category: "web",
+    technologies: ["Spring Boot", "React", "MySQL", "JUnit", "Postman"],
+    githubUrl:
+      "https://github.com/Rupeswarbhainsa777/Application-Management-Web-Application-Backend",
+    liveUrl: "https://application-management-web-applicat.vercel.app/",
+    image: null,
+    icon: "✅" // checkmark for applications
+  },
+  {
+    id: 3,
+    title: "Portfolio Website",
+    description:
+      "A responsive portfolio website built with vanilla HTML, CSS, and JavaScript. Features smooth animations and modern design.",
+    category: "web",
+    technologies: ["HTML5", "CSS3", "JavaScript", "GSAP"],
+    githubUrl: "https://github.com/Rupeswarbhainsa777/Personal-Portfolio",
+    liveUrl: "https://my-personal-portfolio-jade-nu.vercel.app/",
+    image: null,
+    icon: "💼" // briefcase for portfolio
+  },
+  {
+    id: 4,
+    title: "Power BI dashboard for business",
+    description:
+      "Interactive Power BI dashboard for visualizing business metrics and KPIs. Integrated with DAX for advanced calculations and SQL for data extraction.",
+    category: "DataAnalytics",
+    technologies: ["Power BI", "DAX", "SQL", "Data Visualization"],
+    githubUrl: "https://github.com/Rupeswarbhainsa777/Business-Dashboard",
+    image: null,
+    icon: "📊" // bar chart for analytics
+  },
+  {
+    id: 5,
+    title: "Tic Tac Toe Game",
+    description:
+      "Developed a Tic-Tac-Toe game in Java, enhancing object-oriented programming with interactive console-based UI and efficient data structure usage.",
+    category: "General",
+    technologies: ["Eclipse", "Java", "OOP"],
+    githubUrl: "https://github.com/Rupeswarbhainsa777/TicTacToe-Game",
+    image: null,
+    icon: "🎮" // game controller for game
+  },
+  {
+    id: 6,
+    title: "Food Web App",
+    description:
+      "Food Delivery App using Java, JSP/Servlets, MySQL with authentication, order tracking, sequential IDs, and responsive UI (HTML/CSS/JS).",
+    category: "web",
+    technologies: [
+      "Java",
+      "JSP",
+      "Servlets",
+      "MySQL",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    githubUrl: "https://github.com/Rupeswarbhainsa777/Food-Web-App",
+    image: null,
+    icon: "🍔" // burger for food app
+  },
+  {
+    id: 8,
+    title: "Gym Website",
+    description:
+      "Developed a responsive gym website with HTML, CSS, JavaScript, featuring interactive design, services, plans, schedules, and dynamic features",
+    category: "web",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    githubUrl: "https://github.com/Rupeswarbhainsa777/Gym_web",
+    liveUrl: "https://gym-web-lac.vercel.app/",
+    image: null,
+    icon: "🏋️" // weightlifting for gym
+  }
 ];
 
 // DOM elements
