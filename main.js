@@ -89,6 +89,18 @@ const projects = [
     liveUrl: "https://gym-web-lac.vercel.app/",
     image: null,
     icon: "🏋️" // weightlifting for gym
+  },
+  {
+    id: 9,
+    title: "Stone Paper Scissors Game",
+    description:
+      "Developed a Stone Paper Scissors game with HTML, CSS, JavaScript, featuring interactive design and dynamic gameplay.",
+    category: "web",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    githubUrl: "https://github.com/Rupeswarbhainsa777/Stone-paper-scissors-game",
+    liveUrl: "https://stone-paper-scissors-game-fawn.vercel.app/",
+    image: null,
+    icon: "🎮" // weightlifting for gym
   }
 ];
 
