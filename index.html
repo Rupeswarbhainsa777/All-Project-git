@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-16">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rupeswar Bhainsa | Portfolio</title>
+    <title>Rupeswar Bhainsa | Architecture of Code</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
-                    <i class="fas fa-code"></i>
+                <a href="#" class="logo">
                     Rupeswar Bhainsa
-                </div>
+                </a>
                 <nav class="nav">
-                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#projects" class="nav-link">Work</a>
+                    <a href="#github" class="nav-link">Open Source</a>
                     <a href="#about" class="nav-link">About</a>
                     <a href="#contact" class="nav-link">Contact</a>
                 </nav>
@@ -29,53 +28,31 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1 class="hero-title">Hi, I'm Rupeswar Bhainsa</h1>
-            <p class="hero-subtitle">
-                Explore my collection of projects, from web applications to mobile apps, 
-                each showcasing different technologies and creative solutions.
-            </p>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">FULL STACK DEVELOPER.</h1>
+                    <p class="hero-subtitle">
+                        Building digital experiences with structural integrity and creative precision. Specializing in Web Applications, Data Analytics, and Java Development.
+                    </p>
+                </div>
+                <!-- Decorative or Info Grid -->
+                <div class="hero-info">
+                   <!-- Could put something here later -->
+                </div>
+            </div>
+            
             <div class="hero-stats">
                 <div class="stat">
-                    <div class="stat-number" id="total-projects">0</div>
-                    <div class="stat-label">Total Projects</div>
+                    <span class="stat-number" id="total-projects">0</span>
+                    <span class="stat-label">Selected Projects</span>
                 </div>
                 <div class="stat">
-                    <div class="stat-number" id="technologies">0</div>
-                    <div class="stat-label">Technologies</div>
+                    <span class="stat-number" id="technologies">0</span>
+                    <span class="stat-label">Technologies</span>
                 </div>
                 <div class="stat">
-                    <div class="stat-number" id="repositories">0</div>
-                    <div class="stat-label">Repositories</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- Projects Header -->
-    <section class="section-header" id="projects-header">
-        <div class="container">
-            <div class="header-wrapper">
-                <span class="section-tag">My Work</span>
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Discover my latest work, side projects, and experiments.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Filter Section -->
-    <section class="filter-section">
-        <div class="container">
-            <div class="filter-content">
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all">All Projects</button>
-                    <button class="filter-btn" data-filter="web">Web Apps</button>
-                    <button class="filter-btn" data-filter="DataAnalytics">Data Analytics</button>
-                    <button class="filter-btn" data-filter="General">General</button>
-                
-                </div>
-                <div class="search-box">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="search-input" placeholder="Search projects...">
+                    <span class="stat-number" id="repositories">0</span>
+                    <span class="stat-label">Git Repositories</span>
                 </div>
             </div>
         </div>
@@ -84,38 +61,114 @@
     <!-- Projects Section -->
     <section class="projects-section" id="projects">
         <div class="container">
+            <div class="section-header">
+                <div class="section-title-wrapper">
+                    <span class="section-tag">Portfolio</span>
+                    <h2 class="section-title">Selected Work</h2>
+                </div>
+            </div>
+
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <div class="filter-content">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="web">Web</button>
+                        <button class="filter-btn" data-filter="DataAnalytics">Data</button>
+                        <button class="filter-btn" data-filter="General">General</button>
+                    </div>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input" placeholder="Search...">
+                    </div>
+                </div>
+            </div>
+
             <div class="projects-grid" id="projects-grid">
-                <!-- Projects will be dynamically loaded here -->
+                <!-- Projects loaded via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Section -->
+    <section class="github-section" id="github">
+        <div class="container">
+            <div class="section-header" style="border-bottom-color: rgba(255,255,255,0.2); margin-bottom: 4rem;">
+                <div class="section-title-wrapper">
+                    <span class="section-tag" style="color: var(--text-light);">Open Source</span>
+                    <h2 class="section-title" style="color: var(--text-white);">GitHub Activity</h2>
+                </div>
+            </div>
+            
+            <div class="github-grid">
+                <div class="github-profile">
+                    <div class="github-avatar">
+                        <img id="gh-avatar" src="" alt="Profile">
+                    </div>
+                    <div>
+                        <h3 class="github-name" id="gh-name">Loading...</h3>
+                        <p class="github-bio" id="gh-bio">Fetching data...</p>
+                    </div>
+                    <div class="github-stats-grid">
+                        <div class="gh-stat-card">
+                            <span class="gh-stat-value" id="gh-repos">0</span>
+                            <span class="gh-stat-label">Repos</span>
+                        </div>
+                        <div class="gh-stat-card">
+                            <span class="gh-stat-value" id="gh-followers">0</span>
+                            <span class="gh-stat-label">Followers</span>
+                        </div>
+                        <div class="gh-stat-card">
+                            <span class="gh-stat-value" id="gh-following">0</span>
+                            <span class="gh-stat-label">Following</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/Rupeswarbhainsa777" target="_blank" class="project-link" style="color: white; border: 1px solid white; padding: 1rem; justify-content: center; margin-top: 2rem;">
+                        View Full Profile <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="github-content">
+                    <h3 style="font-size: 1.5rem; color: white; margin-bottom: 2rem; font-family: var(--font-heading);">Recent Repositories</h3>
+                    <div class="github-repos-list" id="gh-repos-list">
+                        <div class="loading"><div class="spinner" style="border-color: white; border-top-color: transparent;"></div></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about-section" id="about">
+    <section class="about-section" id="about" style="padding: 8rem 0;">
         <div class="container">
-            <div class="about-content">
-                <h2>About This Portfolio</h2>
-                <p>
-                    This portfolio showcases my journey as a developer, featuring projects that demonstrate 
-                    my skills across various technologies and platforms. Each project represents a learning 
-                    experience and a step forward in my development career.
-                </p>
-                <div class="about-features">
-                    <div class="feature">
-                        <i class="fas fa-code"></i>
-                        <h4>Clean Code</h4>
-                        <p>Well-structured, maintainable code following best practices</p>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h4>Responsive Design</h4>
-                        <p>Projects optimized for all devices and screen sizes</p>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-rocket"></i>
-                        <h4>Modern Tech</h4>
-                        <p>Built with the latest technologies and frameworks</p>
-                    </div>
+             <div class="section-header">
+                <div class="section-title-wrapper">
+                    <span class="section-tag">About</span>
+                    <h2 class="section-title">The Process</h2>
+                </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div>
+                    <p style="font-size: 1.5rem; margin-bottom: 2rem; line-height: 1.4;">
+                        "Architecture starts when you carefully put two bricks together. There it begins."
+                    </p>
+                    <p style="color: var(--text-muted);">
+                        I approach software development with the mindset of an architect. Every line of code is a structural element, every function a room, and every application a building designed to stand the test of time and scale.
+                    </p>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+                     <div>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Clean Code</h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Maintainable, scalable, and efficient code structures.</p>
+                     </div>
+                     <div>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Responsive Layouts</h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Fluid designs that adapt to any viewport or device.</p>
+                     </div>
+                     <div>
+                        <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Modern Tech Stack</h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Leveraging the latest tools for optimal performance.</p>
+                     </div>
                 </div>
             </div>
         </div>
@@ -125,12 +178,17 @@
     <section class="contact-section" id="contact">
         <div class="container">
             <div class="contact-content">
-                <h2>Get In Touch</h2>
-                <p>Interested in collaborating or have questions about my projects?</p>
+                <div>
+                    <span class="section-tag">Contact</span>
+                    <h2 class="section-title" style="margin-bottom: 2rem;">Let's Build<br>Something Great.</h2>
+                    <p style="color: var(--text-muted); max-width: 400px;">
+                        Open for collaborations, freelance projects, and employment opportunities.
+                    </p>
+                </div>
                 <div class="contact-links">
                     <a href="mailto:rupeswarbhainsa777@gmail.com" class="contact-link">
                         <i class="fas fa-envelope"></i>
-                        Email Me
+                        Email
                     </a>
                     <a href="https://github.com/Rupeswarbhainsa777" class="contact-link" target="_blank">
                         <i class="fab fa-github"></i>
@@ -144,6 +202,12 @@
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Rupeswar Bhainsa. All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <script src="main.js"></script>
 </body>

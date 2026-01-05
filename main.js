@@ -1,110 +1,98 @@
-// Sample project data - Replace with your actual projects
+// Project Data
 const projects = [
   {
     id: 1,
     title: "E-Commerce Platform",
-    description:
-      "Developed Spring Boot backend services for authentication, product management, and order processing, designed an optimized MySQL schema with indexing to reduce query response time by 40%, and built/tested REST APIs using JUnit & Postman achieving 85%+ code coverage.",
+    description: "Robust backend system for high-volume transactual processing. Features optimized schemas, secure authentication, and 85% test coverage.",
     category: "web",
-    technologies: ["Spring Boot", "MySQL", "JUnit", "Postman"],
+    technologies: ["Spring Boot", "MySQL", "JUnit"],
     githubUrl: "https://github.com/Rupeswarbhainsa777/Ecommerce-Backend",
     liveUrl: "https://ecommerce-front-end-phi-neon.vercel.app/",
     image: null,
-    icon: "🛒" // shopping cart for e-commerce
+    icon: "🛒"
   },
   {
     id: 2,
-    title: "Application Management System",
-    description:
-      "Built a full-stack job application management web app with CRUD operations by implementing Spring Boot REST APIs for job details and status tracking, designing a user-friendly React UI integrated with backend services, and managing data persistence with MySQL.",
+    title: "Application Management",
+    description: "Full-stack solution for recruitment workflows. Integrated React UI with Spring Boot REST APIs and persistent MySQL storage.",
     category: "web",
-    technologies: ["Spring Boot", "React", "MySQL", "JUnit", "Postman"],
-    githubUrl:
-      "https://github.com/Rupeswarbhainsa777/Application-Management-Web-Application-Backend",
+    technologies: ["React", "Spring Boot", "MySQL"],
+    githubUrl: "https://github.com/Rupeswarbhainsa777/Application-Management-Web-Application-Backend",
     liveUrl: "https://application-management-web-applicat.vercel.app/",
     image: null,
-    icon: "✅" // checkmark for applications
+    icon: "✅"
   },
   {
     id: 3,
-    title: "Portfolio Website",
-    description:
-      "A responsive portfolio website built with vanilla HTML, CSS, and JavaScript. Features smooth animations and modern design.",
+    title: "Portfolio Architecture",
+    description: "Minimalist portfolio design system. Built with vanilla technologies focusing on performance and semantic structure.",
     category: "web",
-    technologies: ["HTML5", "CSS3", "JavaScript", "GSAP"],
+    technologies: ["HTML5", "CSS3", "JavaScript"],
     githubUrl: "https://github.com/Rupeswarbhainsa777/Personal-Portfolio",
     liveUrl: "https://my-personal-portfolio-jade-nu.vercel.app/",
     image: null,
-    icon: "💼" // briefcase for portfolio
+    icon: "💼"
   },
   {
     id: 4,
-    title: "Power BI dashboard for business",
-    description:
-      "Interactive Power BI dashboard for visualizing business metrics and KPIs. Integrated with DAX for advanced calculations and SQL for data extraction.",
+    title: "Business Intelligence",
+    description: "Power BI dashboard implementation for data visualization. Utilizes DAX for complex calculations and SQL for data extraction.",
     category: "DataAnalytics",
-    technologies: ["Power BI", "DAX", "SQL", "Data Visualization"],
+    technologies: ["Power BI", "DAX", "SQL"],
     githubUrl: "https://github.com/Rupeswarbhainsa777/Business-Dashboard",
     image: null,
-    icon: "📊" // bar chart for analytics
+    icon: "📊"
   },
   {
     id: 5,
-    title: "Tic Tac Toe Game",
-    description:
-      "Developed a Tic-Tac-Toe game in Java, enhancing object-oriented programming with interactive console-based UI and efficient data structure usage.",
+    title: "Tic Tac Toe Logic",
+    description: "Java-based game logic implementation. Focuses on object-oriented programming principles and console interaction.",
     category: "General",
-    technologies: ["Eclipse", "Java", "OOP"],
+    technologies: ["Java", "OOP"],
     githubUrl: "https://github.com/Rupeswarbhainsa777/TicTacToe-Game",
     image: null,
-    icon: "🎮" // game controller for game
+    icon: "🎮"
   },
   {
     id: 6,
-    title: "Food Web App",
-    description:
-      "Food Delivery App using Java, JSP/Servlets, MySQL with authentication, order tracking, sequential IDs, and responsive UI (HTML/CSS/JS).",
+    title: "Food Delivery System",
+    description: "JSP/Servlet based application for order management. Includes authentication and full database integration.",
     category: "web",
-    technologies: [
-      "Java",
-      "JSP",
-      "Servlets",
-      "MySQL",
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
+    technologies: ["Java", "SQL", "JSP"],
     githubUrl: "https://github.com/Rupeswarbhainsa777/Food-Web-App",
     image: null,
-    icon: "🍔" // burger for food app
+    icon: "🍔"
   },
   {
     id: 8,
-    title: "Gym Website",
-    description:
-      "Developed a responsive gym website with HTML, CSS, JavaScript, featuring interactive design, services, plans, schedules, and dynamic features",
+    title: "Gym Management",
+    description: "Responsive front-end solution for fitness centers. Features schedule management and plan visualization.",
     category: "web",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JS"],
     githubUrl: "https://github.com/Rupeswarbhainsa777/Gym_web",
     liveUrl: "https://gym-web-lac.vercel.app/",
     image: null,
-    icon: "🏋️" // weightlifting for gym
+    icon: "🏋️"
   },
   {
     id: 9,
-    title: "Stone Paper Scissors Game",
-    description:
-      "Developed a Stone Paper Scissors game with HTML, CSS, JavaScript, featuring interactive design and dynamic gameplay.",
+    title: "Game Logic: RPS",
+    description: "Interactive web-based game implementation. distinct state management and DOM manipulation.",
     category: "web",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["JS", "HTML", "CSS"],
     githubUrl: "https://github.com/Rupeswarbhainsa777/Stone-paper-scissors-game",
     liveUrl: "https://stone-paper-scissors-game-fawn.vercel.app/",
     image: null,
-    icon: "🎮" // weightlifting for gym
+    icon: "🎮"
   }
 ];
 
-// DOM elements
+// Configuration
+const GITHUB_USERNAME = 'Rupeswarbhainsa777';
+const API_URL = `https://api.github.com/users/${GITHUB_USERNAME}`;
+const REPOS_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=4`;
+
+// DOM Elements
 const projectsGrid = document.getElementById('projects-grid');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const searchInput = document.getElementById('search-input');
@@ -116,37 +104,42 @@ const repositoriesEl = document.getElementById('repositories');
 let currentFilter = 'all';
 let currentSearch = '';
 
-// Initialize the application
-document.addEventListener('DOMContentLoaded', function() {
+// Initialization
+document.addEventListener('DOMContentLoaded', () => {
     renderProjects();
     updateStats();
     setupEventListeners();
+    fetchGitHubData();
 });
 
-// Setup event listeners
+// Event Listeners
 function setupEventListeners() {
-    // Filter buttons
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Remove active class from all buttons
             filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
             this.classList.add('active');
-            // Update current filter
             currentFilter = this.dataset.filter;
-            // Re-render projects
             renderProjects();
         });
     });
 
-    // Search input
     searchInput.addEventListener('input', function() {
         currentSearch = this.value.toLowerCase();
         renderProjects();
     });
+    
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 }
 
-// Filter and search projects
+// Logic: Projects
 function getFilteredProjects() {
     return projects.filter(project => {
         const matchesFilter = currentFilter === 'all' || project.category === currentFilter;
@@ -154,32 +147,29 @@ function getFilteredProjects() {
             project.title.toLowerCase().includes(currentSearch) ||
             project.description.toLowerCase().includes(currentSearch) ||
             project.technologies.some(tech => tech.toLowerCase().includes(currentSearch));
-        
         return matchesFilter && matchesSearch;
     });
 }
 
-// Render projects
 function renderProjects() {
     const filteredProjects = getFilteredProjects();
     
     if (filteredProjects.length === 0) {
         projectsGrid.innerHTML = `
-            <div class="no-results">
-                <i class="fas fa-search"></i>
-                <h3>No projects found</h3>
-                <p>Try adjusting your search or filter criteria</p>
+            <div style="grid-column: 1/-1; text-align: center; padding: 4rem; color: var(--text-muted);">
+                <i class="fas fa-search" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                <p>No projects match your criteria.</p>
             </div>
         `;
         return;
     }
 
     projectsGrid.innerHTML = filteredProjects.map(project => `
-        <div class="project-card" data-category="${project.category}">
+        <div class="project-card">
             <div class="project-image">
                 ${project.image ? 
                     `<img src="${project.image}" alt="${project.title}">` : 
-                    `<span style="font-size: 4rem;">${project.icon}</span>`
+                    `<span>${project.icon}</span>`
                 }
             </div>
             <div class="project-content">
@@ -190,15 +180,13 @@ function renderProjects() {
                 </div>
                 <div class="project-links">
                     ${project.githubUrl ? 
-                        `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link primary">
-                            <i class="fab fa-github"></i>
-                            GitHub
+                        `<a href="${project.githubUrl}" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> Code
                         </a>` : ''
                     }
                     ${project.liveUrl ? 
-                        `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link secondary">
-                            <i class="fas fa-external-link-alt"></i>
-                            Live Demo
+                        `<a href="${project.liveUrl}" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Live
                         </a>` : ''
                     }
                 </div>
@@ -207,98 +195,69 @@ function renderProjects() {
     `).join('');
 }
 
-// Update statistics
 function updateStats() {
-    const totalProjects = projects.length;
-    const uniqueTechnologies = [...new Set(projects.flatMap(project => project.technologies))].length;
-    const repositories = projects.filter(project => project.githubUrl).length;
-
-    // Animate counting up
-    animateNumber(totalProjectsEl, totalProjects);
-    animateNumber(technologiesEl, uniqueTechnologies);
-    animateNumber(repositoriesEl, repositories);
+    totalProjectsEl.textContent = projects.length;
+    technologiesEl.textContent = [...new Set(projects.flatMap(p => p.technologies))].length;
+    // repositoriesEl updated by GitHub API
 }
 
-// Animate number counting
-function animateNumber(element, targetNumber) {
-    const duration = 2000; // 2 seconds
-    const startTime = performance.now();
-    const startNumber = 0;
+// Logic: GitHub API
+async function fetchGitHubData() {
+    try {
+        const [userRes, reposRes] = await Promise.all([
+            fetch(API_URL),
+            fetch(REPOS_URL)
+        ]);
+        
+        if (!userRes.ok || !reposRes.ok) throw new Error('GitHub API limit or error');
+        
+        const userData = await userRes.json();
+        const reposData = await reposRes.json();
+        
+        updateGitHubUI(userData, reposData);
+    } catch (error) {
+        console.error('GitHub Fetch Error:', error);
+        document.getElementById('gh-name').textContent = 'GitHub Unavailable';
+        document.getElementById('gh-bio').textContent = 'Could not fetch data (API Rate Limit likely).';
+        document.querySelector('.github-avatar').style.backgroundColor = '#333';
+        document.getElementById('gh-repos-list').innerHTML = '<p style="color:white">Repositories unavailable.</p>';
+    }
+}
 
-    function updateNumber(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        
-        // Easing function for smooth animation
-        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-        const currentNumber = Math.floor(startNumber + (targetNumber - startNumber) * easeOutQuart);
-        
-        element.textContent = currentNumber;
-        
-        if (progress < 1) {
-            requestAnimationFrame(updateNumber);
-        }
+function updateGitHubUI(user, repos) {
+    // Profile
+    const avatarImg = document.getElementById('gh-avatar');
+    if (user.avatar_url) {
+        avatarImg.src = user.avatar_url;
+        avatarImg.parentElement.style.filter = 'grayscale(100%)'; 
     }
     
-    requestAnimationFrame(updateNumber);
+    document.getElementById('gh-name').textContent = user.name || user.login;
+    document.getElementById('gh-bio').textContent = user.bio || 'Open Source Enthusiast';
+    
+    // Stats
+    document.getElementById('gh-repos').textContent = user.public_repos;
+    document.getElementById('gh-followers').textContent = user.followers;
+    document.getElementById('gh-following').textContent = user.following;
+    
+    // Note: Also update the hero stat for repositories with real data
+    if (repositoriesEl) {
+        repositoriesEl.textContent = user.public_repos;
+    }
+
+    // Repos List
+    const reposList = document.getElementById('gh-repos-list');
+    reposList.innerHTML = repos.map(repo => `
+        <a href="${repo.html_url}" target="_blank" class="repo-card">
+            <div>
+                <span class="repo-name">${repo.name}</span>
+                <p class="repo-desc">${repo.description ? repo.description : 'No description available'}</p>
+            </div>
+            <div class="repo-meta">
+                <span><i class="fas fa-star"></i> ${repo.stargazers_count}</span>
+                <span><i class="fas fa-code-branch"></i> ${repo.forks_count}</span>
+                <span><i class="fas fa-circle" style="font-size: 0.5rem;"></i> ${repo.language || 'Code'}</span>
+            </div>
+        </a>
+    `).join('');
 }
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Add loading animation
-function showLoading() {
-    projectsGrid.innerHTML = `
-        <div class="loading">
-            <div class="spinner"></div>
-        </div>
-    `;
-}
-
-// Add intersection observer for animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe project cards for animation
-function observeProjectCards() {
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(card);
-    });
-}
-
-// Re-observe cards when projects are re-rendered
-const originalRenderProjects = renderProjects;
-renderProjects = function() {
-    originalRenderProjects();
-    // Small delay to ensure DOM is updated
-    setTimeout(observeProjectCards, 100);
-};
-
-// Initialize animations
-observeProjectCards();
